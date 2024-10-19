@@ -3,17 +3,18 @@ package packag.mavenproject1;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 
 public class Registro implements Serializable
 {
     
+    boolean E_S;
+    
     ArrayList<Producto> productos;
     
     String fecha;
-    
-    int dia, mes, año;
+   
+    int dia=0, mes=0, año=0;
     
     
     public Registro(ArrayList<Producto> productos)
@@ -51,6 +52,14 @@ public class Registro implements Serializable
         return productos.get(i);
     }
     
-   
+   public void addE_S(boolean a)
+   {
+       E_S = a;
+   }
     
+   public boolean getE_S()
+   {
+       return E_S;
+   }
+   
 }

@@ -8,6 +8,8 @@ import javax.swing.JOptionPane;
 
 public class crear_producto extends javax.swing.JFrame {
 
+    Registro registro;
+
     
     public crear_producto() {
         initComponents();
@@ -298,22 +300,33 @@ public class crear_producto extends javax.swing.JFrame {
             
             String estadoproductostrg;
             
-            if(estadoproducto = true)
+            if(estadoproducto == true)
             {
-                estadoproductostrg = "usado";
+                estadoproductostrg = "Usado";
             }
             else
             {
-                estadoproductostrg = "nuevo";
+                estadoproductostrg = "Nuevo";
             }
             
             LocalDate a = LocalDate.now();
             
-            Producto add = new Producto(Integer.parseInt(precio_producto.getText()), nombre_producto.getText(), Integer.parseInt(cantidad_producto.getText()), Integer.parseInt(textField1.getText()), Marca.getText(), estadoproductostrg, a+"");
+            Producto add = new Producto(Integer.parseInt(precio_producto.getText()), nombre_producto.getText(), Integer.parseInt(cantidad_producto.getText()), Integer.parseInt(textField1.getText()), Marca.getText(), text_estado.getText(), a+"");
         
             categoria.get(lista_categorias.getSelectedIndex()).addProduct(add);
 
             estado = true;
+            
+            ArrayList<Producto> add1 = new ArrayList<>();
+            
+            add1.add(add);
+            
+            Registro add2 = new Registro(add1);
+            
+            registro = add2;
+            
+            registro.addE_S(true);
+            
         }
     
         

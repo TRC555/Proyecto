@@ -9,13 +9,12 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import static javax.swing.UIManager.getLookAndFeel;
 
 public class Mavenproject1 {
+    
+    
+    //Main
     
     public static void main(String[] args) throws InterruptedException 
     {   
@@ -157,8 +156,15 @@ public class Mavenproject1 {
                            if(b==pin.getPin())
                             {
                                 
+                               
+                               Informe add; 
                                 
-                               categoria = MenuAdministrador(categoria, registro, pin);
+                               add = MenuAdministrador(categoria, registro, pin);
+                               
+                               categoria = add.getCategoria();
+                                       
+                               registro = add.getRegistro();
+                               
                             }
                             else
                             {
@@ -261,6 +267,7 @@ public class Mavenproject1 {
                     }
                     else
                     {
+                        
                         Reporte(registro);
                     }
                     
@@ -284,9 +291,14 @@ public class Mavenproject1 {
                         pin=null;
                     }
                     
+                    break;
                     
+                case 8:
+                    
+                    Kardex(registro);
                     
                     break;
+                    
             }
             
             GuardarRegistro(registro);
@@ -296,6 +308,8 @@ public class Mavenproject1 {
         }
         System.exit(0);
     }
+    
+    //Guardado de informacion
     
     public static void GuardarInformacion(ArrayList<Categoria> historial)
     {
@@ -422,7 +436,7 @@ public class Mavenproject1 {
         return null;
     }
     
-    
+    //Funciones operacionales
     
     public static Informe IngresarVenta(ArrayList<Categoria> categoria, ArrayList<Registro> registro, int indicador) throws InterruptedException
     {
@@ -494,9 +508,7 @@ public class Mavenproject1 {
         return  retorno; 
     }
     
-    
-     
-    public static ArrayList<Categoria> MenuAdministrador(ArrayList<Categoria> categoria, ArrayList<Registro> registro, Contraseña pin) throws InterruptedException
+    public static Informe MenuAdministrador(ArrayList<Categoria> categoria, ArrayList<Registro> registro, Contraseña pin) throws InterruptedException
     {
        int menu;
        
@@ -569,8 +581,9 @@ public class Mavenproject1 {
                         {
                             categoria = menu_producto.categoria;
                         }
+                     
+                        registro.add(menu_producto.registro);
                         
-
                    }
 
                    break;
@@ -650,11 +663,11 @@ public class Mavenproject1 {
         
        
       
-       return categoria;
+        Informe info = new Informe(registro, categoria);
+        
+        return info;
    }
-   
-    
-    
+  
     public static void Reporte(ArrayList<Registro> registro) throws InterruptedException
     {
         
@@ -703,11 +716,24 @@ public class Mavenproject1 {
                 ventana2.setVisible(false);
                 
             }
-            
+    }
+
+    public static void Kardex(ArrayList<Registro> registros) throws InterruptedException
+    {
         
-        
-        
-      
+       Kardex ventana = new Kardex(); 
+       
+       ventana.setVisible(true);
+       
+       ventana.setinformacion(registros);
+       
+        while(ventana.estado!=true)
+        {
+            TimeUnit.MILLISECONDS.sleep(50);
+        }
+
+        ventana.setVisible(false);
+     
     }
 }   
 

@@ -6,6 +6,7 @@ packag\mavenproject1\Menu_Administrador$4.class
 packag\mavenproject1\Inventario$2.class
 packag\mavenproject1\Modificar_inventario$2.class
 packag\mavenproject1\Reporte_Excel$3.class
+packag\mavenproject1\Kardex$3.class
 packag\mavenproject1\Menu_Principal$5.class
 packag\mavenproject1\Modificar_reportes$2.class
 packag\mavenproject1\crear_producto$8.class
@@ -40,6 +41,7 @@ packag\mavenproject1\crear_producto$9.class
 packag\mavenproject1\Menu_Principal$7.class
 packag\mavenproject1\Ingresar_venta$1.class
 packag\mavenproject1\Fecha$3.class
+packag\mavenproject1\Menu_Principal$9.class
 packag\mavenproject1\Categoria.class
 packag\mavenproject1\crear_producto$1.class
 packag\mavenproject1\Inventario$6.class
@@ -62,10 +64,13 @@ packag\mavenproject1\Menu_Administrador.class
 packag\mavenproject1\crear_producto$4.class
 packag\mavenproject1\Reporte_Excel.class
 packag\mavenproject1\crear_producto.class
+packag\mavenproject1\Kardex$2.class
 packag\mavenproject1\Modificar_reportes$3.class
 packag\mavenproject1\Registro.class
 packag\mavenproject1\Ingresar_venta$7.class
+packag\mavenproject1\Kardex.class
 packag\mavenproject1\crear_producto$6.class
+packag\mavenproject1\Kardex$1.class
 packag\mavenproject1\Fecha$1.class
 packag\mavenproject1\Ingresar_productos$4.class
 packag\mavenproject1\Modificar_inventario$7.class
@@ -82,6 +87,7 @@ packag\mavenproject1\Informe.class
 packag\mavenproject1\Modificar_inventario$8.class
 packag\mavenproject1\crear_producto$5.class
 packag\mavenproject1\Inventario$1.class
+packag\mavenproject1\Inventario$7.class
 packag\mavenproject1\Menu_Principal$4.class
 packag\mavenproject1\Producto.class
 packag\mavenproject1\Ingresar_venta$2.class

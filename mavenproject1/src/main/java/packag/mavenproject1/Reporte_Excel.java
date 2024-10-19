@@ -369,6 +369,8 @@ public class Reporte_Excel extends javax.swing.JFrame {
             
             for(int i=0; i<reportes.size(); i++)
             {
+                
+                
                 if(reportes.get(i).dia==0 & reportes.get(i).mes==0 & reportes.get(i).año==0)
                 {
                     
