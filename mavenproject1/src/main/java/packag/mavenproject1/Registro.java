@@ -15,6 +15,7 @@ public class Registro implements Serializable
     
     int dia, mes, año;
     
+    
     public Registro(ArrayList<Producto> productos)
     {
         this.productos = productos;

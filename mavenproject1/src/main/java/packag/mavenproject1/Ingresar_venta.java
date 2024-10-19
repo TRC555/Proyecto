@@ -318,7 +318,7 @@ public class Ingresar_venta extends javax.swing.JFrame {
 
                 int index=0;
 
-                Producto add = new Producto(Integer.parseInt(textField1.getText()), categoria2.get(x).getProducto(y).getnombre3() , cantidad, categoria2.get(x).getProducto(y).getpreciocosto());
+                Producto add = new Producto(Integer.parseInt(textField1.getText()), categoria2.get(x).getProducto(y).getnombre3() , cantidad, categoria2.get(x).getProducto(y).getpreciocosto(), categoria2.get(x).getProducto(y).getMarca(), categoria2.get(x).getProducto(y).getEstado(), categoria2.get(x).getProducto(y).getfecha());
 
                 for(int i=0; i<reporte.size(); i++)
                 {

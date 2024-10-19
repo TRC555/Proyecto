@@ -1,6 +1,7 @@
 
 package packag.mavenproject1;
 
+import javax.swing.table.DefaultTableModel;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -36,11 +37,12 @@ public class Inventario extends javax.swing.JFrame {
         jProgressBar1 = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
         Lista_categoria = new javax.swing.JComboBox<>();
-        Lista_Producto = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -53,12 +55,6 @@ public class Inventario extends javax.swing.JFrame {
         Lista_categoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Lista_categoriaActionPerformed(evt);
-            }
-        });
-
-        Lista_Producto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Lista_ProductoActionPerformed(evt);
             }
         });
 
@@ -89,39 +85,77 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Marca", "Precio venta recomendado", "Costo", "Cantidad", "Estado", "Fecha llegada"
+            }
+        ));
+        jTable1.setFocusable(false);
+        jTable1.setRowSelectionAllowed(false);
+        jTable1.setVerifyInputWhenFocusTarget(false);
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(Lista_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
-                .addComponent(Lista_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(605, 605, 605)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(605, 605, 605)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(616, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Lista_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 1093, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 1093, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1093, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(117, 117, 117))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lista_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lista_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Lista_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 523, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addGap(12, 12, 12)
                 .addComponent(jToggleButton1)
@@ -145,17 +179,13 @@ public class Inventario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Lista_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lista_ProductoActionPerformed
-        
-    }//GEN-LAST:event_Lista_ProductoActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         estado = true;
         terminar = true;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void Lista_categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lista_categoriaActionPerformed
-        Lista_Producto.removeAllItems();
+        
         
         if(categoria.isEmpty())
         {
@@ -163,97 +193,49 @@ public class Inventario extends javax.swing.JFrame {
         }
         else
         {
+            
+            if(categoria.get(Lista_categoria.getSelectedIndex()).getProductosize()<=jTable1.getRowCount())
+            {
+                
+                for(int i=categoria.get(Lista_categoria.getSelectedIndex()).getProductosize(); i<jTable1.getRowCount(); i++)
+                {
+                    for(int j=0; j<7 ;j++)
+                    {
+                        jTable1.getModel().setValueAt("", i, j);
+                    }
+                }
+            }
+            
             for(int i=0; i<categoria.get(Lista_categoria.getSelectedIndex()).getProductosize(); i++)
             {
                 
-                Lista_Producto.addItem(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getNombre());
-
+                
+                
+                if(jTable1.getRowCount()<=i)
+                {
+                    DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+                    model.addRow(new Object[]{"", "", "", "", "", "", ""});
+                }
+                
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getnombre3(), i, 0); //= 
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getMarca(), i, 1);
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getPrecio(), i, 2);
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getpreciocosto(), i, 3);
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getCantidad(), i, 4);
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getEstado(), i, 5);
+                jTable1.getModel().setValueAt(categoria.get(Lista_categoria.getSelectedIndex()).getProducto(i).getfecha(), i, 6);
+                
+                
+                
+                
             }
+            
+            
+            
         }
     }//GEN-LAST:event_Lista_categoriaActionPerformed
 
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        Workbook libro = new XSSFWorkbook();
-        final String nombreArchivo = "Inventario.xlsx";
-        Sheet hoja = libro.createSheet("Hoja 1");
-        
-        Row primeraFila = hoja.createRow(0);
-        
-        Cell ceroCelda = primeraFila.createCell(0);
-        Cell primeraCelda = primeraFila.createCell(1);
-        Cell segundaCelda = primeraFila.createCell(2);
-        Cell cuartaCelda = primeraFila.createCell(3);
-        
-        ceroCelda.setCellValue("Categoria");
-        primeraCelda.setCellValue("Nombre");
-        segundaCelda.setCellValue("Cantidad");
-        cuartaCelda.setCellValue("Venta");
-       
-        ArrayList<String> nombreCategorias = new ArrayList<>();
-        ArrayList<Producto> productos = new ArrayList<>();
-        
-        estado = true;
-        
-        JFileChooser pat = new JFileChooser();
-        
-        seleccion = pat.showOpenDialog(null);
-        
-        if(seleccion == JFileChooser.APPROVE_OPTION)
-        {
-            
-            terminar=true;
-            
-            for(int i=0; i<categoria.size(); i++)
-            {
-                for(int j=0; j<categoria.get(i).getProductosize(); j++)
-                {
-                    productos.add(categoria.get(i).getProducto(j));
-                    nombreCategorias.add(categoria.get(i).getNombre());
-                }
-
-            }
-
-            for(int i=0; i<productos.size(); i++)
-            {
-
-                Row Filas = hoja.createRow(i+1); 
-
-                Cell a = Filas.createCell(0);
-                Cell b = Filas.createCell(1);
-                Cell c = Filas.createCell(2);
-                Cell e = Filas.createCell(3);
-
-                a.setCellValue(nombreCategorias.get(i));
-                b.setCellValue(productos.get(i).getnombre3());
-                c.setCellValue(productos.get(i).getCantidad());
-                e.setCellValue(productos.get(i).getPrecio());
-
-            }
-
-            String ubicacionArchivoSalida = pat.getSelectedFile().getPath()+".xlsx";
-            FileOutputStream outputStream;
-
-            try 
-            {
-                outputStream = new FileOutputStream(ubicacionArchivoSalida);
-                libro.write(outputStream);
-                libro.close();
-                System.out.println("Libro guardado correctamente");
-            } 
-            catch (FileNotFoundException ex) 
-            {
-                System.out.println("Error de filenotfound");
-            } 
-            catch (IOException ex) 
-            {
-                System.out.println("Error de IOException");
-            }
-        }
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
      
      
@@ -274,14 +256,14 @@ public class Inventario extends javax.swing.JFrame {
          jComboBox1.setVisible(true);
          jButton2.setVisible(false);
          Lista_categoria.setVisible(false);
-         Lista_Producto.setVisible(false);
+         
      }
      else
      {
          jComboBox1.setVisible(false);
          jButton2.setVisible(true);
          Lista_categoria.setVisible(true);
-         Lista_Producto.setVisible(true);
+         
          
      }
         
@@ -291,6 +273,91 @@ public class Inventario extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        Workbook libro = new XSSFWorkbook();
+        final String nombreArchivo = "Inventario.xlsx";
+        Sheet hoja = libro.createSheet("Hoja 1");
+
+        Row primeraFila = hoja.createRow(0);
+
+        Cell ceroCelda = primeraFila.createCell(0);
+        Cell primeraCelda = primeraFila.createCell(1);
+        Cell segundaCelda = primeraFila.createCell(2);
+        Cell cuartaCelda = primeraFila.createCell(3);
+
+        ceroCelda.setCellValue("Categoria");
+        primeraCelda.setCellValue("Nombre");
+        segundaCelda.setCellValue("Cantidad");
+        cuartaCelda.setCellValue("Venta");
+
+        ArrayList<String> nombreCategorias = new ArrayList<>();
+        ArrayList<Producto> productos = new ArrayList<>();
+
+        estado = true;
+
+        JFileChooser pat = new JFileChooser();
+
+        seleccion = pat.showOpenDialog(null);
+
+        if(seleccion == JFileChooser.APPROVE_OPTION)
+        {
+
+            terminar=true;
+
+            for(int i=0; i<categoria.size(); i++)
+            {
+                for(int j=0; j<categoria.get(i).getProductosize(); j++)
+                {
+                    productos.add(categoria.get(i).getProducto(j));
+                    nombreCategorias.add(categoria.get(i).getNombre());
+                }
+
+            }
+
+            for(int i=0; i<productos.size(); i++)
+            {
+
+                Row Filas = hoja.createRow(i+1);
+
+                Cell a = Filas.createCell(0);
+                Cell b = Filas.createCell(1);
+                Cell c = Filas.createCell(2);
+                Cell e = Filas.createCell(3);
+
+                a.setCellValue(nombreCategorias.get(i));
+                b.setCellValue(productos.get(i).getnombre3());
+                c.setCellValue(productos.get(i).getCantidad());
+                e.setCellValue(productos.get(i).getPrecio());
+
+            }
+
+            String ubicacionArchivoSalida = pat.getSelectedFile().getPath()+".xlsx";
+            FileOutputStream outputStream;
+
+            try
+            {
+                outputStream = new FileOutputStream(ubicacionArchivoSalida);
+                libro.write(outputStream);
+                libro.close();
+                System.out.println("Libro guardado correctamente");
+            }
+            catch (FileNotFoundException ex)
+            {
+                System.out.println("Error de filenotfound");
+            }
+            catch (IOException ex)
+            {
+                System.out.println("Error de IOException");
+            }
+        }
+        else
+        {
+            terminar = true;
+        }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,19 +402,22 @@ public class Inventario extends javax.swing.JFrame {
         
         for(int i=0; i<categoria.size(); i++)
         {
+            
             Lista_categoria.addItem(categoria.get(i).getNombre()+" "+"("+categoria.get(i).getProductosize()+")");
             
         }
+        
+        
+        
     }
     
     public void Fondodemenu()
     {
-        jPanelImage mImage = new jPanelImage(jPanel1,"/a.jpeg");
+        jPanelImage mImage = new jPanelImage(jPanel1,"/AdobeStock_200984766.jpeg");
         jPanel1.add(mImage).repaint();
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Lista_Producto;
     private javax.swing.JComboBox<String> Lista_categoria;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -355,6 +425,8 @@ public class Inventario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

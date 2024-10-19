@@ -7,14 +7,17 @@ public class Producto implements Serializable
 {
     String factura;
     int precio, cantidad, preciocosto;
-    String nombre;
+    String nombre, marca, estado, fechaingreso;
     
-    public Producto(int precio, String nombre, int cantidad, int preciocosto)
+    public Producto(int precio, String nombre, int cantidad, int preciocosto, String marca, String estado, String fechaingreso)
     {
         this.precio = precio;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.preciocosto = preciocosto;
+        this.marca = marca;
+        this.estado = estado;
+        this.fechaingreso = fechaingreso;
     }
     
     public String getnombre3()
@@ -80,6 +83,21 @@ public class Producto implements Serializable
     public void setNombre(String nombre)
     {
         this.nombre = nombre;
+    }
+    
+    public String getMarca()
+    {
+        return marca;
+    }
+    
+    public String getEstado()
+    {
+        return estado;
+    }
+    
+    public String getfecha()
+    {
+        return fechaingreso;
     }
     
 }

@@ -1,5 +1,6 @@
 
 package packag.mavenproject1;
+import java.awt.Window;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,12 +9,16 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import static javax.swing.UIManager.getLookAndFeel;
 
 public class Mavenproject1 {
     
     public static void main(String[] args) throws InterruptedException 
-    {
+    {   
         ArrayList<Registro> registro = new ArrayList<>();
         
         ArrayList<Categoria> categoria = new ArrayList<>();
@@ -46,7 +51,7 @@ public class Mavenproject1 {
             
             Menu_Principal menu = new Menu_Principal();
             
-            //menu.Fondodemenu();
+            menu.Fondodemenu();
             
             menu.setVisible(true);
             
