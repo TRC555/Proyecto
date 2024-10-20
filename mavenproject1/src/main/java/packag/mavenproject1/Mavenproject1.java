@@ -48,6 +48,8 @@ public class Mavenproject1 {
         for(int i=0; i!=1;)
         {
             
+            JOptionPane.showMessageDialog(null, "Valor de reporte: "+registro.size());
+            
             Menu_Principal menu = new Menu_Principal();
             
             menu.Fondodemenu();
@@ -295,6 +297,11 @@ public class Mavenproject1 {
                     
                 case 8:
                     
+                    for(int j=registro.size(); j>0; j--)
+                    {
+                        
+                    }
+                    
                     Kardex(registro);
                     
                     break;
@@ -472,7 +479,7 @@ public class Mavenproject1 {
         {
            
             ArrayList add = new ArrayList<>();
-        
+            
             add = menuventa.getRegistro();
             
             int cola;
@@ -486,16 +493,11 @@ public class Mavenproject1 {
             }
             else
             {
-                if(registro.get(cola-1).fecha==null)
-                {
-                    
-                    registro.get(cola-1).añadirproductos(add);
-                }
-                else
-                {
-                    Registro add2 = new Registro(add);
-                    registro.add(add2);
-                }
+                
+                JOptionPane.showMessageDialog(null, "B");
+                Registro add2 = new Registro(add);
+                registro.add(add2);
+                
                 
             }
             
@@ -720,7 +722,7 @@ public class Mavenproject1 {
 
     public static void Kardex(ArrayList<Registro> registros) throws InterruptedException
     {
-        
+     
        Kardex ventana = new Kardex(); 
        
        ventana.setVisible(true);

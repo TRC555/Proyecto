@@ -6,6 +6,7 @@ package packag.mavenproject1;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -34,7 +35,6 @@ public class Kardex extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1366, 768));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
 
@@ -47,7 +47,6 @@ public class Kardex extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null},
@@ -217,14 +216,21 @@ public class Kardex extends javax.swing.JFrame {
     
     public void setinformacion(ArrayList<Registro> reportes)
     {
-            int acumulador=0;
+        int acumulador=0;
         
             for(int i=0; i<reportes.size(); i++)
             {
-                
+                if(i>=40)
+                {
+                    DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+                    model.addRow(new Object[]{"", "", "", "", "", "", ""});
+                }
                 
                 for(int j=0; j<reportes.get(i).getProducto().size(); j++)
                 {
+                    
+                    JOptionPane.showMessageDialog(null, "Valor de i: "+i);
+                    JOptionPane.showMessageDialog(null, "valor de j: "+j);
                     
                     int total = reportes.get(i).getproducto(j).getpreciocosto()*reportes.get(i).getproducto(j).getCantidad();
                     
@@ -238,10 +244,7 @@ public class Kardex extends javax.swing.JFrame {
                         jTable1.getModel().setValueAt(reportes.get(i).getproducto(j).getCantidad(), i, 5);
                         jTable1.getModel().setValueAt(total, i, 6);
                         
-                        
-                        
                         acumulador = acumulador-total;
-                        
                         
                     }
                     else
