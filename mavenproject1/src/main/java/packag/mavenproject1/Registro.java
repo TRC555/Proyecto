@@ -19,7 +19,9 @@ public class Registro implements Serializable
     
     public Registro(ArrayList<Producto> productos)
     {
-        this.productos = productos;
+        ArrayList<Producto> mediador = new ArrayList<>(productos);
+        
+        this.productos = mediador;
     }
     
     public void setfecha(String fecha)
@@ -60,6 +62,11 @@ public class Registro implements Serializable
    public boolean getE_S()
    {
        return E_S;
+   }
+   
+   public void setproducto()
+   {
+       
    }
    
 }

@@ -10,18 +10,27 @@ public class Informe
     
     public Informe(ArrayList<Registro> registro, int a)
     {
-        this.registro = registro;
+        ArrayList<Registro> mediador = new ArrayList<>(registro);
+        
+        registro = mediador;
     }
     
     public Informe(ArrayList<Categoria> categoria)
     {
-        this.categoria = categoria;
+        ArrayList<Categoria> mediador = new ArrayList<>(categoria);
+        
+        this.categoria = mediador;
     }
     
     public Informe(ArrayList<Registro> registro, ArrayList<Categoria> categoria)
     {
-        this.registro = registro;
-        this.categoria = categoria;
+        
+        ArrayList<Registro> mediador1 = new ArrayList<>(registro);
+        
+        ArrayList<Categoria> mediador2 = new ArrayList<>(categoria);
+        
+        this.registro = mediador1;
+        this.categoria = mediador2;
     }
     
     public ArrayList<Registro> getRegistro()

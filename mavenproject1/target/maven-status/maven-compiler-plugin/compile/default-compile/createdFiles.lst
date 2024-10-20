@@ -4,7 +4,6 @@ packag\mavenproject1\Modificar_reportes.class
 packag\mavenproject1\Menu_Administrador$4.class
 packag\mavenproject1\Inventario$2.class
 packag\mavenproject1\Modificar_inventario$2.class
-packag\mavenproject1\Reporte_Excel$3.class
 packag\mavenproject1\Kardex$3.class
 packag\mavenproject1\Menu_Principal$5.class
 packag\mavenproject1\Modificar_reportes$2.class
@@ -20,14 +19,12 @@ packag\mavenproject1\Menu_Administrador$7.class
 packag\mavenproject1\Ingresar_productos$1.class
 packag\mavenproject1\Inventario$4.class
 packag\mavenproject1\Ingresar_venta$6.class
-packag\mavenproject1\Reporte_Excel$4.class
 packag\mavenproject1\Modificar_reportes$12.class
 packag\mavenproject1\crear_producto$3.class
 packag\mavenproject1\Ingresar_productos.class
 packag\mavenproject1\Modificar_inventario.class
 packag\mavenproject1\Menu_Principal$8.class
 packag\mavenproject1\Modificar_reportes$7.class
-packag\mavenproject1\Reporte_Excel$5.class
 packag\mavenproject1\crear_producto$2.class
 packag\mavenproject1\Ingresar_venta$5.class
 packag\mavenproject1\Menu_Principal$1.class
@@ -61,11 +58,9 @@ packag\mavenproject1\Modificar_reportes$9.class
 packag\mavenproject1\Ingresar_venta$4.class
 packag\mavenproject1\Menu_Administrador.class
 packag\mavenproject1\crear_producto$4.class
-packag\mavenproject1\Reporte_Excel.class
 packag\mavenproject1\crear_producto.class
 packag\mavenproject1\Kardex$2.class
 packag\mavenproject1\Modificar_reportes$3.class
-packag\mavenproject1\Registro.class
 packag\mavenproject1\Kardex.class
 packag\mavenproject1\crear_producto$6.class
 packag\mavenproject1\Kardex$1.class
@@ -74,7 +69,6 @@ packag\mavenproject1\Ingresar_productos$4.class
 packag\mavenproject1\Modificar_inventario$7.class
 packag\mavenproject1\Menu_Principal.class
 packag\mavenproject1\Menu_Administrador$6.class
-packag\mavenproject1\Reporte_Excel$1.class
 packag\mavenproject1\Ingresar_venta$3.class
 packag\mavenproject1\Menu_Principal$3.class
 packag\mavenproject1\Menu_Administrador$5.class
@@ -87,8 +81,6 @@ packag\mavenproject1\crear_producto$5.class
 packag\mavenproject1\Inventario$1.class
 packag\mavenproject1\Inventario$7.class
 packag\mavenproject1\Menu_Principal$4.class
-packag\mavenproject1\Producto.class
 packag\mavenproject1\Ingresar_venta$2.class
 packag\mavenproject1\jPanelImage.class
 packag\mavenproject1\Modificar_reportes$10.class
-packag\mavenproject1\Reporte_Excel$2.class

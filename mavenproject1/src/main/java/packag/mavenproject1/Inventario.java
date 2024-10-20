@@ -404,7 +404,9 @@ public class Inventario extends javax.swing.JFrame {
 
     public void setCategoria(ArrayList<Categoria> categoria)
     {
-        this.categoria = categoria;
+        ArrayList<Categoria> intermediario = new ArrayList<>(categoria);
+        
+        this.categoria = intermediario;
         
         jComboBox1.setVisible(false);
         

@@ -297,12 +297,12 @@ public class Menu_Administrador extends javax.swing.JFrame {
     
     public void Fondodemenu()
     {
-        jPanelImage mImage = new jPanelImage(jPanel1,"/IMG-20240430-WA0029.jpg");
+        jPanelImage mImage = new jPanelImage(jPanel1,"/What-is-Inventory-Management-Techniques-and-Benefits-.jpg");
         jPanel1.add(mImage).repaint();
     }
     
     public void setCategoria(ArrayList<Categoria> categoria)
-    {
+    {   
         this.categoria = categoria;
     }
     

@@ -100,4 +100,9 @@ public class Producto implements Serializable
         return fechaingreso;
     }
     
+    public Producto copiar()
+    {
+        return new Producto(this.precio, this.nombre, this.cantidad, this.preciocosto, this.marca, this.estado, this.fechaingreso);
+    }
+    
 }

@@ -303,7 +303,8 @@ public class Mavenproject1 {
                         for(int k=j+1; k<registro.size() ; k++)
                         {
                             
-                            if(registro.get(j).getproducto(0).getnombre3().equals(registro.get(k).getproducto(0).getnombre3()) && registro.get(j).getproducto(0).getfecha().equals(registro.get(k).getproducto(0).getfecha()) && registro.get(k).getE_S()==registro.get(j).getE_S())
+                            
+                            if(registro.get(j).getproducto(0).getnombre3().equals(registro.get(k).getproducto(0).getnombre3()) && registro.get(j).getproducto(0).getfecha().equals(registro.get(k).getproducto(0).getfecha()) && registro.get(k).getE_S()==registro.get(j).getE_S() && registro.get(k).getproducto(0).getPrecio()==registro.get(j).getproducto(0).getPrecio())
                             {
                                 
                                 registro.get(j).getproducto(0).setCantidad(registro.get(j).getproducto(0).getCantidad()+registro.get(k).getproducto(0).getCantidad());
@@ -461,6 +462,8 @@ public class Mavenproject1 {
     
     public static Informe IngresarVenta(ArrayList<Categoria> categoria, ArrayList<Registro> registro, int indicador) throws InterruptedException
     {
+       
+        Informe retorno;
         
         Ingresar_venta menuventa = new Ingresar_venta();
         
@@ -468,18 +471,14 @@ public class Mavenproject1 {
         
         menuventa.setCombobox(categoria);
         
-        Informe retorno;
-        
         menuventa.setVisible(true);
         
         for(boolean a=true; a!=menuventa.getestado();)
         {
              TimeUnit.MILLISECONDS.sleep(50);
         }
-            
+        
         menuventa.setVisible(false);
-            
-            
             
         if(menuventa.getcancelar() == true)
         {
@@ -508,10 +507,8 @@ public class Mavenproject1 {
             else
             {
                 
-                JOptionPane.showMessageDialog(null, "B");
                 Registro add2 = new Registro(add);
                 registro.add(add2);
-                
                 
             }
             
@@ -644,6 +641,10 @@ public class Mavenproject1 {
                    
                    Registro report = new Registro(productos.registro);
                    
+                   report.addE_S(true);
+                   
+                   
+                   
                    registro.add(report);
 
                    break;
@@ -681,8 +682,25 @@ public class Mavenproject1 {
             }
         }
         
-       
+        GuardarInformacion(categoria);
+        GuardarDatosGenerales(pin);
       
+        if(leerBinario("Guardado\\Contraseña.bin")!=null)
+        {
+            if(leerInformacion("Guardado\\Informacion.bin")!=null)
+            {
+                categoria = leerInformacion("Guardado\\Informacion.bin");
+            }
+            
+            pin = leerBinario("Guardado\\Contraseña.bin");
+        }
+        else
+        {
+            pin.setPin(Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese el nuevo ping: ")));
+        }
+        
+       
+        
         Informe info = new Informe(registro, categoria);
         
         return info;

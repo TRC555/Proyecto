@@ -8,7 +8,7 @@ public class Ingresar_productos extends javax.swing.JFrame {
 
     boolean estado=false;
     
-    boolean cancelar = false;
+    int alo;
     
     ArrayList<Producto> registro = new ArrayList<>();
     
@@ -192,8 +192,9 @@ public class Ingresar_productos extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        
        int x,y,cantidad;
-       Producto add; 
-        
+       
+       Producto add2;
+       
        if(jTextField1.getValue().equals(0))
        {
            
@@ -207,18 +208,20 @@ public class Ingresar_productos extends javax.swing.JFrame {
             y=jComboBox1.getSelectedIndex();
             x=jComboBox2.getSelectedIndex();
 
-            add = categoria.get(x).getProducto(y);
-
+            add2 = categoria.get(x).getProducto(y);
+            
+            Producto add = categoria.get(x).getProducto(y).copiar();
 
              jComboBox3.addItem(add.getNombre2()+"("+cantidad+")");
 
-             add.setCantidad(add.getCantidad()+cantidad);
+             add2.setCantidad(add.getCantidad()+cantidad);
 
              jComboBox1.setSelectedItem(add.getNombre());
              
-             
+             add.setCantidad(cantidad);
              
              registro.add(add);
+             
              
        }
        
@@ -235,11 +238,13 @@ public class Ingresar_productos extends javax.swing.JFrame {
 
     public void setCombobox(ArrayList<Categoria> categoria)
     {
-        this.categoria = categoria;
+        ArrayList<Categoria> intermediario = new ArrayList<>(categoria);
         
-        for(int i=0; i<categoria.size(); i++)
+        this.categoria = intermediario;
+        
+        for(int i=0; i<intermediario.size(); i++)
         {
-            jComboBox2.addItem("("+categoria.get(i).getProductosize()+")"+" "+categoria.get(i).getNombre());
+            jComboBox2.addItem("("+intermediario.get(i).getProductosize()+")"+" "+intermediario.get(i).getNombre());
         }
     }
     

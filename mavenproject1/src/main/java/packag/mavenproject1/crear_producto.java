@@ -372,7 +372,9 @@ public class crear_producto extends javax.swing.JFrame {
 
     public void setCategoria(ArrayList<Categoria> categoria)
     {
-        this.categoria = categoria;
+        
+        ArrayList<Categoria> intermediario = new ArrayList<>(categoria);
+        this.categoria = intermediario;
         
         for(int i=0; i<categoria.size(); i++)
         {
