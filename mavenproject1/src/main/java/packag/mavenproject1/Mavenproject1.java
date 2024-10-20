@@ -48,7 +48,7 @@ public class Mavenproject1 {
         for(int i=0; i!=1;)
         {
             
-            JOptionPane.showMessageDialog(null, "Valor de reporte: "+registro.size());
+            //JOptionPane.showMessageDialog(null, "Valor de reporte: "+registro.size());
             
             Menu_Principal menu = new Menu_Principal();
             
@@ -297,8 +297,22 @@ public class Mavenproject1 {
                     
                 case 8:
                     
-                    for(int j=registro.size(); j>0; j--)
+                    for(int j=0; j<registro.size(); j++)
                     {
+                        
+                        for(int k=j+1; k<registro.size() ; k++)
+                        {
+                            
+                            if(registro.get(j).getproducto(0).getnombre3().equals(registro.get(k).getproducto(0).getnombre3()) && registro.get(j).getproducto(0).getfecha().equals(registro.get(k).getproducto(0).getfecha()) && registro.get(k).getE_S()==registro.get(j).getE_S())
+                            {
+                                
+                                registro.get(j).getproducto(0).setCantidad(registro.get(j).getproducto(0).getCantidad()+registro.get(k).getproducto(0).getCantidad());
+                                
+                                registro.remove(k);
+                                
+                            }
+                            
+                        }
                         
                     }
                     
@@ -360,7 +374,7 @@ public class Mavenproject1 {
         
         return null;
     }
-                                                                            //BLOQUE DE GUARDADO Y CARGADO
+                                                                            
     public static void GuardarDatosGenerales(Contraseña historial)
     {
         try
@@ -379,7 +393,7 @@ public class Mavenproject1 {
         }
         
         
-    }
+    }                                                               //BLOQUE DE GUARDADO Y CARGADO
     
     public static Contraseña leerBinario(String ruta)
     {
@@ -627,6 +641,10 @@ public class Mavenproject1 {
                    }
 
                    productos.setVisible(false);
+                   
+                   Registro report = new Registro(productos.registro);
+                   
+                   registro.add(report);
 
                    break;
 

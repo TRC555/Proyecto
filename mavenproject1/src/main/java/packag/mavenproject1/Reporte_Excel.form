@@ -51,7 +51,7 @@
                       <Component id="button2" min="-2" pref="150" max="-2" attributes="0"/>
                       <Component id="Lista_inicio" min="-2" pref="400" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="362" max="32767" attributes="0"/>
+                  <EmptySpace pref="196" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="button1" min="-2" pref="150" max="-2" attributes="0"/>
                       <Component id="Lista_final" min="-2" pref="400" max="-2" attributes="0"/>
@@ -59,7 +59,7 @@
                   <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="622" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="542" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -84,14 +84,14 @@
                       <Component id="Lista_inicio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Lista_final" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="456" max="32767" attributes="0"/>
+                  <EmptySpace pref="288" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="button2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="button1" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
