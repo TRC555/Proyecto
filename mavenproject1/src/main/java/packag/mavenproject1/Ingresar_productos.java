@@ -283,7 +283,7 @@ public class Ingresar_productos extends javax.swing.JFrame {
     
     public void Fondodemenu()
     {
-        jPanelImage mImage = new jPanelImage(jPanel1,"/a.jpeg");
+        jPanelImage mImage = new jPanelImage(jPanel1,"/WhatsApp Image 2024-10-20 at 12.36.33 PM.jpeg");
         jPanel1.add(mImage).repaint();
     }
 
