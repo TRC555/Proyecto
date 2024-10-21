@@ -297,7 +297,7 @@ public class Menu_Administrador extends javax.swing.JFrame {
     
     public void Fondodemenu()
     {
-        jPanelImage mImage = new jPanelImage(jPanel1,"/What-is-Inventory-Management-Techniques-and-Benefits-.jpg");
+        jPanelImage mImage = new jPanelImage(jPanel1,"/administracion-bodega.png");
         jPanel1.add(mImage).repaint();
     }
     

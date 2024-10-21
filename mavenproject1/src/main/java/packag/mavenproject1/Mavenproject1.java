@@ -297,20 +297,25 @@ public class Mavenproject1 {
                     
                 case 8:
                     
+                    registro.trimToSize();
+                    
                     for(int j=0; j<registro.size(); j++)
                     {
                         
-                        for(int k=j+1; k<registro.size() ; k++)
+                        registro.trimToSize();
+                        
+                        for(int k=j+1; k<registro.size(); k++)
                         {
                             
-                            
+                            registro.trimToSize();
+                           
                             if(registro.get(j).getproducto(0).getnombre3().equals(registro.get(k).getproducto(0).getnombre3()) && registro.get(j).getproducto(0).getfecha().equals(registro.get(k).getproducto(0).getfecha()) && registro.get(k).getE_S()==registro.get(j).getE_S() && registro.get(k).getproducto(0).getPrecio()==registro.get(j).getproducto(0).getPrecio())
                             {
                                 
                                 registro.get(j).getproducto(0).setCantidad(registro.get(j).getproducto(0).getCantidad()+registro.get(k).getproducto(0).getCantidad());
                                 
                                 registro.remove(k);
-                                
+                              
                             }
                             
                         }
@@ -684,6 +689,7 @@ public class Mavenproject1 {
         
         GuardarInformacion(categoria);
         GuardarDatosGenerales(pin);
+        GuardarRegistro(registro);
       
         if(leerBinario("Guardado\\Contraseña.bin")!=null)
         {
@@ -699,6 +705,10 @@ public class Mavenproject1 {
             pin.setPin(Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese el nuevo ping: ")));
         }
         
+        if(leerRegistro()!=null)
+        {
+            registro = leerRegistro();
+        }
        
         
         Informe info = new Informe(registro, categoria);
