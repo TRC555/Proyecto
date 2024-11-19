@@ -1,6 +1,5 @@
 
 package packag.mavenproject1;
-import java.awt.Window;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
